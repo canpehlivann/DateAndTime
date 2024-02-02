@@ -6,6 +6,7 @@ namespace DateAndTime
     class LocalTimer
     {
         public TimeSpan IntervalTime { get; set; }
+        
         public Timer timer { get; set; }
         
         public DateTime DateTimeNow { get; set; }
@@ -36,6 +37,7 @@ namespace DateAndTime
                 }
             }
         }
+        
         public LocalTimer(TimeSpan intervalTime, DateTime now, int indicatorIntervalsDelay = 5)
         {
             IntervalTime = intervalTime;
@@ -52,6 +54,7 @@ namespace DateAndTime
             
             active = true;
         }
+        
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             intervals++;
